@@ -20,7 +20,7 @@ This guide walks you through the steps to run the **DSML4EMOBILITY** project fro
 Clone the project from the repository:
 
 
-git clone https://github.com/ELHAMLAOUI/DSML4EMOBILITY.git
+git clone https://github.com/all4s3c/EMOBILITYDSML.git
 
 ## Run the Project in Eclipse
 To test  project:
