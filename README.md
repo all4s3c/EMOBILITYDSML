@@ -1,3 +1,14 @@
+# About
+Electric vehicles (EVs) and their ecosystem have unquestionably made significant technological strides. Indeed, EVs have evolved into sophisticated computer systems with extensive internal and external communication capabilities. This interconnection raises concerns about security, privacy, and the expanding risk of cyber-attacks within the electric vehicle landscape. In particular, the charging infrastructure plays a crucial role in the electric mobility ecosystem. With the proliferation of charging points, new attack vectors are opened up for cybercriminals. The threat landscape targeting charging systems encompasses various types of attacks ranging from physical attacks to data breaches including customer information. 
+In this project, we aim to leverage the power of model-driven engineering to model and analyze EV charging systems at early stages. We employ domain-specific modeling language techniques for the early security analysis of EV charging infrastructure. Specifically, we use the Object Constraint Language (OCL) for precise specification and verification of security threats as properties of a modeled system. 
+
+
+# Collaborators
+Anas Motii
+Mahmoud ELHamlaoui
+Robert Basmadjian
+
+
 # Running the DSML4EMOBILITY Project
 
 This guide walks you through the steps to run the **DSML4EMOBILITY** project from GitHub using Eclipse and the Sirius plugin.
