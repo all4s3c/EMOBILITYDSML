@@ -27,4 +27,4 @@ To test  project:
 
 - In the Project Explorer, right-click the project.
 - Select Run As > Eclipse Application.
-- In the new Eclipse instance that opens, create your own model (or use existing one in samples folder).
+- In the new Eclipse instance that opens, create your own model or you can use the attached emobility_project.zip project .
