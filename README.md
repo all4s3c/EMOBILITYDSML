@@ -4,9 +4,7 @@ In this project, we aim to leverage the power of model-driven engineering to mod
 
 
 # Collaborators
-Anas Motii
-Mahmoud ELHamlaoui
-Robert Basmadjian
+Anas Motii, Mahmoud ELHamlaoui, Robert Basmadjian
 
 
 # Running the DSML4EMOBILITY Project
