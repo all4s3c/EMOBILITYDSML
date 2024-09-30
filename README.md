@@ -7,9 +7,9 @@ In this project, we aim to leverage the power of model-driven engineering to mod
 Anas Motii, Mahmoud ELHamlaoui, Robert Basmadjian
 
 
-# Running the DSML4EMOBILITY Project
+# Running the EMOBILITYDSML Project
 
-This guide walks you through the steps to run the **DSML4EMOBILITY** project from GitHub using Eclipse and the Sirius plugin.
+This guide walks you through the steps to run the **EMOBILITYDSML** project from GitHub using Eclipse and the Sirius plugin.
 
 ## Prerequisites
 - **Obeo Designer**: [Download here](https://www.obeodesigner.com/en/download). Or,
