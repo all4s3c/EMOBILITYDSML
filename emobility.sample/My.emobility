@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emobility:EMobilityArchitecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emobility="http://www.example.org/emobility">
+  <emobilityelement xsi:type="emobility:Domain" name="EV USER Premises">
+    <emobilityelement xsi:type="emobility:EV_User" name="User1"/>
+    <emobilityelement xsi:type="emobility:Mobile" name="Mobile1"/>
+    <emobilityelement xsi:type="emobility:Laptop" name="Laptop1"/>
+    <emobilityelement xsi:type="emobility:Browser" name="Chrome"/>
+    <emobilityelement xsi:type="emobility:eMSP" name="eMSP1"/>
+    <emobilityelement xsi:type="emobility:Communication" name="communication_Browser1_eMSP1" info_protocol="API_REST" source="//@emobilityelement.0/@emobilityelement.3" destination="//@emobilityelement.0/@emobilityelement.4" comm_protocol="HTTPS"/>
+    <emobilityelement xsi:type="emobility:APK" name="APK1"/>
+    <emobilityelement xsi:type="emobility:Communication" Confidentiality="L3" name="communication_APK1_eMSP1" info_protocol="API_REST" source="//@emobilityelement.0/@emobilityelement.6" destination="//@emobilityelement.0/@emobilityelement.4" comm_protocol="HTTPS"/>
+    <emobilityelement xsi:type="emobility:Communication" Confidentiality="L3" name="communication_eMSP1_CSO1" info_protocol="OCPI" source="//@emobilityelement.0/@emobilityelement.4" destination="//@emobilityelement.1/@emobilityelement.0"/>
+    <emobilityelement xsi:type="emobility:EV_User" name="USER2"/>
+    <emobilityelement xsi:type="emobility:Browser" name="Mozilla"/>
+  </emobilityelement>
+  <emobilityelement xsi:type="emobility:Domain" name="Energy Transfer from/to EV">
+    <emobilityelement xsi:type="emobility:CSO" name="CSO"/>
+    <emobilityelement xsi:type="emobility:CSMS" name="CSMS" server="//@emobilityelement.1/@emobilityelement.14"/>
+    <emobilityelement xsi:type="emobility:Communication" Confidentiality="L3" name="communication_CSO1_CSMS1" info_protocol="OCPP" source="//@emobilityelement.1/@emobilityelement.0" destination="//@emobilityelement.1/@emobilityelement.1"/>
+    <emobilityelement xsi:type="emobility:EVSE" name="EVSE1"/>
+    <emobilityelement xsi:type="emobility:EVSE" name="EVSE2"/>
+    <emobilityelement xsi:type="emobility:EVSE" name="EVSE3" isExposed="true"/>
+    <emobilityelement xsi:type="emobility:Communication" name="communication_CSMS1_EVSE1" source="//@emobilityelement.1/@emobilityelement.1" destination="//@emobilityelement.1/@emobilityelement.3"/>
+    <emobilityelement xsi:type="emobility:Communication" name="communication_CSMS1_EVSE2" source="//@emobilityelement.1/@emobilityelement.1" destination="//@emobilityelement.1/@emobilityelement.4"/>
+    <emobilityelement xsi:type="emobility:Communication" name="communication_CSMS1_EVSE3" source="//@emobilityelement.1/@emobilityelement.1" destination="//@emobilityelement.1/@emobilityelement.5"/>
+    <emobilityelement xsi:type="emobility:Communication" name="communication__EVSE3" destination="//@emobilityelement.1/@emobilityelement.5"/>
+    <emobilityelement xsi:type="emobility:SecurityControl" name="RFID card" type="RFID_Card"/>
+    <emobilityelement xsi:type="emobility:SecurityControl" name="Authentication by OTP" type="Authentication_OTP"/>
+    <emobilityelement xsi:type="emobility:SecurityControl" name="Authentication on App" type="Authentication_App"/>
+    <emobilityelement xsi:type="emobility:SecurityControl" name="Patch Management" type="Patch_Management"/>
+    <emobilityelement xsi:type="emobility:Server" securitycontrol="//@emobilityelement.1/@emobilityelement.13 //@emobilityelement.1/@emobilityelement.15" name="RHEL 1.6"/>
+    <emobilityelement xsi:type="emobility:SecurityControl" name="OS Hardening" type="Hardening"/>
+    <emobilityelement xsi:type="emobility:SecurityControl" name="Authentication on CSMS" type="Authentication"/>
+    <emobilityelement xsi:type="emobility:SecurityControl" name="Access Control" type="Access_Control"/>
+    <emobilityelement xsi:type="emobility:SecurityControl" name="Logging actions" type="Logging_access_and_actions"/>
+    <emobilityelement xsi:type="emobility:SecurityControl" name="Secure Developement Process" type="Secure_Software_Developement_Process"/>
+    <emobilityelement xsi:type="emobility:Administrator" name="Admin"/>
+  </emobilityelement>
+  <emobilityelement xsi:type="emobility:Domain" name="Electric Vehicule">
+    <emobilityelement xsi:type="emobility:Electric_Vehicule"/>
+    <emobilityelement xsi:type="emobility:Communication" name="communication__EVSE3" source="//@emobilityelement.2/@emobilityelement.0" destination="//@emobilityelement.1/@emobilityelement.5" comm_protocol="CAN_CHAdeMO"/>
+  </emobilityelement>
+  <emobilityelement xsi:type="emobility:APK" Confidentiality="L3" securitycontrol="//@emobilityelement.23" name="APK1" description="The vendor's official mobile application"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Authentication on CSMS" type="Authentication"/>
+  <emobilityelement xsi:type="emobility:Communication" name="communication_CSMS1_EVSE2" description="" source="//@emobilityelement.27" destination="//@emobilityelement.29"/>
+  <emobilityelement xsi:type="emobility:Communication" name="communication EV_EVSE3" source="//@emobilityelement.20" destination="//@emobilityelement.25" comm_protocol="CAN_CHAdeMO"/>
+  <emobilityelement xsi:type="emobility:Communication" name="communication_CSMS1_EVSE3" source="//@emobilityelement.27" destination="//@emobilityelement.25"/>
+  <emobilityelement xsi:type="emobility:Communication" Availability="L2" Integrity="L3" Confidentiality="L3" securitycontrol="//@emobilityelement.36" name="communication_CSO1_CSMS1" description="Communication between CSO and CSMS" info_protocol="OCPP" source="//@emobilityelement.9" destination="//@emobilityelement.27"/>
+  <emobilityelement xsi:type="emobility:CSO" name="CSO"/>
+  <emobilityelement xsi:type="emobility:Laptop" name="Laptop1" description="Out of scope"/>
+  <emobilityelement xsi:type="emobility:Administrator" name="Admin"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="RFID card" type="RFID_Card"/>
+  <emobilityelement xsi:type="emobility:Browser" name="Chrome" description="Out of scope"/>
+  <emobilityelement xsi:type="emobility:EVSE" Integrity="L2" Confidentiality="L3" securitycontrol="//@emobilityelement.45 //@emobilityelement.43 //@emobilityelement.44 //@emobilityelement.42 //@emobilityelement.12 //@emobilityelement.28" name="EVSE1" description="EVSE in the field"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Authentication on App" type="Authentication_App"/>
+  <emobilityelement xsi:type="emobility:Browser" name="Mozilla" description="Out of scope"/>
+  <emobilityelement xsi:type="emobility:Communication" name="communication_Browser1_eMSP1" info_protocol="API_REST" source="//@emobilityelement.13" destination="//@emobilityelement.30" comm_protocol="HTTPS"/>
+  <emobilityelement xsi:type="emobility:Communication" name="communication_CSMS1_EVSE1" source="//@emobilityelement.27" destination="//@emobilityelement.14"/>
+  <emobilityelement xsi:type="emobility:Communication" name="communication_eMSP1_CSO1" info_protocol="OCPI" source="//@emobilityelement.30" destination="//@emobilityelement.9"/>
+  <emobilityelement xsi:type="emobility:Electric_Vehicule"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Patch Management" type="Patch_Management"/>
+  <emobilityelement xsi:type="emobility:Server" Integrity="L3" Confidentiality="L3" securitycontrol="//@emobilityelement.34 //@emobilityelement.21" name="RHEL 1.6" description="Server that supports CSMS"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Secure Developement Process" type="Secure_Software_Developement_Process"/>
+  <emobilityelement xsi:type="emobility:Mobile" name="Mobile1"/>
+  <emobilityelement xsi:type="emobility:EVSE" Availability="L2" Integrity="L3" Confidentiality="L3" securitycontrol="//@emobilityelement.45 //@emobilityelement.42 //@emobilityelement.43 //@emobilityelement.44 //@emobilityelement.36 //@emobilityelement.21 //@emobilityelement.34 //@emobilityelement.12 //@emobilityelement.28" name="EVSE3" description="EVSE in the field" isExposed="true"/>
+  <emobilityelement xsi:type="emobility:Communication" Confidentiality="L3" securitycontrol="//@emobilityelement.36" name="communication_APK1_eMSP1" description="Communication between the apk and the service provider" info_protocol="API_REST" source="//@emobilityelement.3" destination="//@emobilityelement.30" comm_protocol="HTTPS"/>
+  <emobilityelement xsi:type="emobility:CSMS" Availability="L3" Integrity="L3" Confidentiality="L3" securitycontrol="//@emobilityelement.23 //@emobilityelement.31 //@emobilityelement.4 //@emobilityelement.35" name="CSMS" description="CSMS" server="//@emobilityelement.22"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Authentication by OTP" type="Authentication_OTP"/>
+  <emobilityelement xsi:type="emobility:EVSE" Availability="L2" Integrity="L3" Confidentiality="L3" securitycontrol="//@emobilityelement.45 //@emobilityelement.42 //@emobilityelement.43 //@emobilityelement.44 //@emobilityelement.12 //@emobilityelement.21" name="EVSE2" description="EVSE in the field"/>
+  <emobilityelement xsi:type="emobility:eMSP" name="eMSP1"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Logging actions" type="Logging_access_and_actions"/>
+  <emobilityelement xsi:type="emobility:EV_User" name="USER2"/>
+  <emobilityelement xsi:type="emobility:EV_User" name="User1"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="OS Hardening" type="Hardening"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Access Control" type="Access_Control"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Encryption"/>
+  <emobilityelement xsi:type="emobility:CS_operator_sys_to_from_CS_manag_sys" description="connector id, type and standard"/>
+  <emobilityelement xsi:type="emobility:App_to_from_CS_operator_system" Integrity="L2" Confidentiality="L3" securitycontrol="//@emobilityelement.36" description="name, email, address"/>
+  <emobilityelement xsi:type="emobility:CS_manag_sys_to_from_CS_Controller" Integrity="L3" description="Charging station ID"/>
+  <emobilityelement xsi:type="emobility:App_to_from_CS_operator_system" Confidentiality="L3" securitycontrol="//@emobilityelement.36" description="Payment Information" data_type="payment_information"/>
+  <emobilityelement xsi:type="emobility:Battery_health_to_from_Sensors" Confidentiality="L2" description="Vehicule identification number"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Door Sensors" description="" type="Door_Sensors"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Tamper evident seals" type="Tamper_evident_seals"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Inspection of seals" type="Inspection_of_seals_and_Intrenal_material"/>
+  <emobilityelement xsi:type="emobility:SecurityControl" name="Locking" description="" type="Locking_mecanisms"/>
+  <emobilityelement xsi:type="emobility:Risk">
+    <threat name="Sniffing communications between App and eMSP" description="An attacker can exploit the lack of encryption in order to read sensitive data that includes (personal information, payement data)" id="1" mitigations="//@emobilityelement.36" threat_category="Information_Disclosure"/>
+    <threat name="Communication between CSO and CSMS" description="An attacker can exploit the lack of encryption in order to read sensitive data that includes (personal information, payement data)" id="2" mitigations="//@emobilityelement.36"/>
+    <threat name="Internal attacks on CSMS" description="An malicious internal administrator can perform malicious actions by tampering data" mitigations="//@emobilityelement.4 //@emobilityelement.21 //@emobilityelement.34 //@emobilityelement.23 //@emobilityelement.35 //@emobilityelement.31" threat_category="Tampering"/>
+    <threat name="Physical attacks on EVSEs on the chargin station" description="A malicious actor can access the charging station and tamper EVSEs due to a lack pf physical security" risk_level="L2" mitigations="//@emobilityelement.42 //@emobilityelement.44 //@emobilityelement.43 //@emobilityelement.45" threat_category="Tampering"/>
+    <threat name="Deneial of service attack over the exposed EVSE" description="A malicious actor can gain access to the exposed EVSE and make it unvailable for users" likelihood="L2" risk_level="L2" mitigations="//@emobilityelement.34 //@emobilityelement.21" threat_category="Denial_of_Service"/>
+    <threat/>
+  </emobilityelement>
+</emobility:EMobilityArchitecture>
