@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<emobility:Domain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emobility="http://www.example.org/emobility" xmi:id="_-OUrkIycEe-hzuRK9UDYdw">
+  <emobilityelement xsi:type="emobility:EV_User" xmi:id="_Cu-MQIydEe-hzuRK9UDYdw"/>
+</emobility:Domain>
