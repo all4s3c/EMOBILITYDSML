@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: emobility.textual.emdsl.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: emobility.textual.emdsl.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: emobility.textual.emdsl.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: emobility.textual.emdsl,
+ emobility,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: emobility.textual.emdsl.ide.contentassist.antlr,
+ emobility.textual.emdsl.ide.contentassist.antlr.internal

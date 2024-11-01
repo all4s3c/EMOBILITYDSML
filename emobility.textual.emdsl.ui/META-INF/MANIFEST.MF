@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: emobility.textual.emdsl.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: emobility.textual.emdsl.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: emobility.textual.emdsl.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: emobility.textual.emdsl,
+ emobility.textual.emdsl.ide,
+ emobility,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.14.300",
+ org.eclipse.ui.ide;bundle-version="3.18.500",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: emobility.textual.emdsl.ui.contentassist,
+ emobility.textual.emdsl.ui.internal,
+ emobility.textual.emdsl.ui.quickfix
+Bundle-Activator: emobility.textual.emdsl.ui.internal.EmdslActivator

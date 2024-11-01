@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: emobility.textual.emdsl
+Bundle-ManifestVersion: 2
+Bundle-Name: emobility.textual.emdsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: emobility.textual.emdsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: emobility,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.16.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.36.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: emobility.textual.emdsl.scoping,
+ emobility.textual.emdsl.generator,
+ emobility.textual.emdsl,
+ emobility.textual.emdsl.formatting2,
+ emobility.textual.emdsl.parser.antlr.internal,
+ emobility.textual.emdsl.serializer,
+ emobility.textual.emdsl.validation,
+ emobility.textual.emdsl.services,
+ emobility.textual.emdsl.parser.antlr
+Import-Package: org.apache.log4j
